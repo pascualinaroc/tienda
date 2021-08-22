@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <title>eMercado - Todo lo que busques está aquí</title>
+  <title>eMercado - Todo lo que busques está acá</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
@@ -41,16 +41,17 @@
   <div class="container p-5">
     
     <h1> Log In :)</h1>
-      <p>inicia sesión:</p>
+      <p>Iniciá sesión:</p>
       <hr>
       <label for="inputemail">Insgresá tu mail</label>
-      <input type="email" class="inputemail" placeholder="Email" required>
+      <input type="email" id="inputEmail" class="inputemail" placeholder="Email" required>
       <div> </div>
       <label for="inputpassword">Insgresá tu contraseña</label>
-      <input type="password" class="inputpassword" placeholder="Contraseña" required>
+      <input type="password" id="inputpassword" class="inputpassword" placeholder="Contraseña" required>
     <hr>
-    <input type="button" value="Iniciar">
-  </div>
+    <input type="button" id="inicioButton" value="Iniciar" onclick="window.location.href='inicio.html';">
+     
+  </div> 
 
   <script src="js/init.js"></script>
   <script src="js/login.js"></script>
