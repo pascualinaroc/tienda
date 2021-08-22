@@ -1,5 +1,5 @@
 
-var categoriesArray = [];
+ var categoriesArray = [];
 
 function showProductsList(array){
     let htmlContentToAppend = "";
@@ -26,32 +26,10 @@ function showProductsList(array){
             </div>
         </div>
         `
-        document.getElementById("cat-list-container").innerHTML
+        document.getElementById("cat-list-container").innerHTML = htmlContentToAppend;
     }
 }
 
-/// function cargarDatos(productos_url) {
-///       document.getElementById("data").innerHTML = "";
-///        fetch(productos_url)
-///            .then(respuesta => respuesta.json())
-///            .then(datos =>{
-
-
-///            for (let i=0; <datos.length; i++){
-///                let row = "";
-///                row =`
-///                    <tr>
-///                        <td>` + datos[i].nombre + `</td>
-///                        <td>` + datos[i].categoria + `</td>
-///                        <td>` + datos[i].origen + `</td>
-///                    </tr>`;
-///                
-///                document.getElementById("data").innerHTML += row;
-///            
-///
-///            })
-///            .catch(error => alert("Hubo un error: "+ error ));
-///    }
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
