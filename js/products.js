@@ -1,5 +1,5 @@
 
- var categoriesArray = [];
+var categoriesArray = [];
 
 function showProductsList(array){
     let htmlContentToAppend = "";
