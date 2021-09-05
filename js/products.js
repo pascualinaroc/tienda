@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         showProductsList(productsArray);
     });
 
-    document.getElementById("clearRangeFilter").addEventListener("click", function(){
+    document.getElementById("Limpiar").addEventListener("click", function(){
         document.getElementById("CostMin").value = "";
         document.getElementById("CostMax").value = "";
 
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         showProductsList();
     });
 
-    document.getElementById("rangeFilterCount").addEventListener("click", function(){
+    document.getElementById("Filtrar").addEventListener("click", function(){
         //Obtengo el mínimo y máximo de los intervalos para filtrar por cantidad
         //de productos por categoría.
         minCost = document.getElementById("CostMin").value;

@@ -1,3 +1,4 @@
+/*
 function guardarDatos(){
     //primero creo un objeto con dos atributos. ahi guardo lo que el usuario puso
     // cuando hace click. la function guardar datos es lo mismo que
@@ -35,7 +36,7 @@ function guardarDatos(){
      }
  }
 
-/*document.addEventListener("DOMContentLoaded", function(e){
+document.addEventListener("DOMContentLoaded", function(e){
 
     let camposCompletos = true;
 
@@ -46,9 +47,10 @@ function guardarDatos(){
      }
     });}*/
 
-/*
+
 document.addEventListener("DOMContentLoaded", function(e){
-    
+    document.getElementById("inicioButton").addEventListener("click", function(){
+
     let inputEmail = document.getElementById("inputEmail");
     let inputPassword = document.getElementById("inputPassword");
     
@@ -61,10 +63,18 @@ let camposCompletos = true
 if (inputEmail.value === ""){
     inputEmail.classList.add("invalid");
     camposCompletos = false;
-}
+}else{ inputEmail.classList.remove("invalid")}
 
 if (inputPassword.value === ""){
     inputPassword.classList.add("invalid");
     camposCompletos = false;
+}else{ inputPassword.classList.remove("invalid")}
+
+if (camposCompletos) {
+
+    localStorage.setItem('userLogged', JSON.stringify({email: inputEmail.value}));
+    window.location = "inicio.html";
 }
-*/
+else{alert("Mail o contrasena incorrectas! :(");}
+})
+});

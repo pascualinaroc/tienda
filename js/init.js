@@ -44,7 +44,7 @@ var getJSONData = function(url){
 document.addEventListener("DOMContentLoaded", function(e){
 // GET ITEM devuelve el valor por medio de la key que usamos para guardar
 // los datos en el localstorage. esa info es un json que guardo en la variable userlogged
-  let userLogged = localStorage.getItem('datos_usuario');
+  let userLogged = localStorage.getItem('userLogged');
 
   let infoUser = document.getElementById("info-user");
 
@@ -56,15 +56,14 @@ document.addEventListener("DOMContentLoaded", function(e){
 
 // ahora lo manejo como un objeto de JS, accedo al atributo email
 
-    maildelusuario.innerText = maildelusuario.email + 'Usuario: ' + userLogged;
+    maildelusuario.innerText = maildelusuario.innerText + 'Usuario: ' + userLogged.email;
     infoUser.style = "display: inline-block";
   }
 
   if (document.getElementById("salir")){
     document.getElementById("salir").addEventListener("click", function (){
-      localStorage.removeItem('datos_usuario');
+      localStorage.removeItem('userLogged');
       window.location = 'index.html';
-
     })
   }
 
