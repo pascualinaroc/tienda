@@ -7,7 +7,7 @@ function guardarDatos(){
          inputPasword: document.getElementById("inputPassword").value
      };
      // trigo los campos con los datos y ahora tienen valor de string.
-     // Si hab[ia algo guardado ahí, lo guardo
+     // Si había algo guardado ahí, lo guardo
  
  
      let datos_usuario_json = JSON.stringify(datos_usuario);

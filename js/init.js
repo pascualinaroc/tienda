@@ -41,6 +41,40 @@ var getJSONData = function(url){
 }
 
 
+document.addEventListener("DOMContentLoaded", function(e){
+
+  let userLogged = localStorage.getItem('datos_usuario');
+
+  let infoUser = document.getElementById("maildeusuario");
+
+  if (userLogged) {
+    userLogged = JSON.parse(userLogged);
+
+// funcion flecha, muestra la variable dentro del html
+    infoUser.innerText = userLogged.email;
+    infoUser.style = "display: inline-block";
+  }
+
+});
+
+
+/* DONDE MIERDA VA ESTO/???
+function recuperarDatos(){
+  if (localStorage.getItem("datos_usuario")){
+
+    let datos_usuario_json = localStorage.getItem("datos_usuario");
+    let datos_usuario_json = JSON.parse(datos_usuario_json);
+
+    document.getElementById("datosRecuperados").innerHTML=
+    "inputEmail:" + datos_usuario.dato1 + "<br>";
+
+  }else{
+
+    document.getElementById("datosRecuperados").innerHTML = "No ha ingresado el usuario";
+  }
+}
+*/ 
+
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
