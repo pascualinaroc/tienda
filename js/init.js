@@ -42,17 +42,30 @@ var getJSONData = function(url){
 
 
 document.addEventListener("DOMContentLoaded", function(e){
-
+// GET ITEM devuelve el valor por medio de la key que usamos para guardar
+// los datos en el localstorage. esa info es un json que guardo en la variable userlogged
   let userLogged = localStorage.getItem('datos_usuario');
 
-  let infoUser = document.getElementById("maildeusuario");
+  let infoUser = document.getElementById("info-user");
 
+  let maildelusuario = document.getElementById("maildelusuario");
+ // verifico si el usuario esta logueado, si existe userLogged
   if (userLogged) {
+// si esta logueado con JSON.parse la transforma en un obj de JS. recibe string devuelve objeto.
     userLogged = JSON.parse(userLogged);
 
-// funcion flecha, muestra la variable dentro del html
-    infoUser.innerText = userLogged.email;
+// ahora lo manejo como un objeto de JS, accedo al atributo email
+
+    maildelusuario.innerText = maildelusuario.email + 'Usuario: ' + userLogged;
     infoUser.style = "display: inline-block";
+  }
+
+  if (document.getElementById("salir")){
+    document.getElementById("salir").addEventListener("click", function (){
+      localStorage.removeItem('datos_usuario');
+      window.location = 'index.html';
+
+    })
   }
 
 });
