@@ -56,25 +56,26 @@ document.addEventListener("DOMContentLoaded", function(e){
     
     // trigo los campos con los datos y ahora tienen valor de string.
     // Si hab[ia algo guardado ahí, lo guardo
-let camposCompletos = true
+    let camposCompletos = true
 // poner acá que todo esto se active al tocar el botón de Iniciar, y listo,
 // que guarde los datos después de que los campos están completos seguro
 //
-if (inputEmail.value === ""){
-    inputEmail.classList.add("invalid");
-    camposCompletos = false;
-}else{ inputEmail.classList.remove("invalid")}
+        if (inputEmail.value === ""){
+            inputEmail.classList.add("invalid");
+            camposCompletos = false;
+        }else{ inputEmail.classList.remove("invalid")}
 
-if (inputPassword.value === ""){
-    inputPassword.classList.add("invalid");
-    camposCompletos = false;
-}else{ inputPassword.classList.remove("invalid")}
+        if (inputPassword.value === ""){
+            inputPassword.classList.add("invalid");
+            camposCompletos = false;
+        }else{ inputPassword.classList.remove("invalid")}
 
-if (camposCompletos) {
+        // si esta todo bien, se muestra y va pal inicio, sino alertaaa
+        if (camposCompletos) {
 
-    localStorage.setItem('userLogged', JSON.stringify({email: inputEmail.value}));
-    window.location = "inicio.html";
-}
-else{alert("Mail o contrasena incorrectas! :(");}
-})
-});
+            localStorage.setItem('userLogged', JSON.stringify({email: inputEmail.value}));
+            window.location = "inicio.html";
+        }
+        else{alert("Mail o contrasena incorrectas! :(");}
+        })
+        });
