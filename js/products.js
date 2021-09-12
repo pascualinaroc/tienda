@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
             maxCost = undefined;
         }
 
-        showProductsList();
+        showProductsList(productsArray);
     });
 
 });
